@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="bootstrab/css/bootstrap.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary"
+        style="z-index:1 ; opacity: .8; position: fixed; width: 100%; top: 0;">
+
+        <input type="image" src="images/pictures/مخلخ.jpg" class="me-3 rounded-circle" alt="pic" height="40px"
+            width="40px" style="margin-right: 1em;">
+        <a class="navbar-brand " href="#"
+            style="border-right:1px solid #ccc; font-weight: bold; padding-right:10px ;color:rgb(235,235,235);">Good</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: rgb(255, 255, 255); ">Home <span
+                            class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: rgb(255, 255, 255); ">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: rgb(255, 255, 255); ">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                        style="background-color:rgba(250,250 ,250 ,.8 )">
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">python</a>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">Java</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">Html</a>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">Css</a>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">JavaScript</a>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">bootstrab</a>
+                        <a class="dropdown-item" href="#" style="color: rgb(41, 68, 155); ">json</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" style="color: rgb(255, 255, 255); ">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+                    style="margin-right:1em ;">Search</button>
+            </form>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
+        </div>
+    </nav>
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 3.5em;">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/pictures/1.webp" alt="Html" width="100%" height="500">
+                <div class="carousel-caption"
+                    style="background: rgba(200, 200, 200, 0.3);border-radius: 7px;position: absolute;right: 15%;bottom: 1.25rem;left: 15%;padding-top: 1.25rem;padding-bottom: 1.25rem;color: #fff;text-align: center;">
+                    <h2>html</h2>
+                    <a href="" class="btn btn-danger" target="_blank">view this course</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/pictures/2.jpg" alt="Css" width="100%" height="500">
+                <div class="carousel-caption"
+                    style="background: rgba(200, 200, 200, 0.3);border-radius: 7px;position: absolute;right: 15%;bottom: 1.25rem;left: 15%;padding-top: 1.25rem;padding-bottom: 1.25rem;color: #fff;text-align: center;">
+                    <h2>Css</h2>
+                    <a href="" class="btn btn-success" target="_blank">view this course</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/pictures/3.jpg" alt="JavaScript" width="100%" height="500">
+                <div class="carousel-caption"
+                    style="background: rgba(200, 200, 200, 0.3);border-radius: 7px;position: absolute;right: 15%;bottom: 1.25rem;left: 15%;padding-top: 1.25rem;padding-bottom: 1.25rem;color: #fff;text-align: center;">
+                    <h2>JavaScript</h2>
+                    <a href="" class="btn btn-dark" target="_blank">view this course</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/pictures/4.jpg" alt="json" width="100%" height="500">
+                <div class="carousel-caption"
+                    style="background: rgba(200, 200, 200, 0.3);border-radius: 7px;position: absolute;right: 15%;bottom: 1.25rem;left: 15%;padding-top: 1.25rem;padding-bottom: 1.25rem;color: #fff;text-align: center;">
+                    <h2>json</h2>
+                    <a href="" class="btn btn-primary" target="_blank">view this course</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+
+    <div class="card p-4 bg-dark text-white " style="border-top-left-radius: 0; border-top-right-radius:0 ;">
+        <div class="card-body">
+            <h2 class="card-title">Welcome</h2>
+            <p class="card-text">programming without language and without code.</p>
+            <a href="#" class="btn btn-primary mt-4" style="transition: 2s;">learn more</a>
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 1em; background-color: gray; margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <div style="width: 100%; height: 1em; background-color: gray"></div>
+
+
+    <h1 class="text-center text-light bg-secondary p-3 m-0 ">Programming language </h1>
+    <div>
+        <button class="accordion-button btn-outline-dark collapsed" data-toggle="collapse" data-target="#demo"
+            aria-expanded="false" aria-controls="demo"
+            style="border: 0; border-bottom:1px solid black; outline: 0; width:100%; height:3.5em; text-align:start ;">
+            python programming language
+            <i class="fas fa-arrow-down" style="display:flex ; justify-content:end ; margin-top: -.7em;"></i>
+        </button>
+        <div id="demo" class="collapse" style="margin: 1em;">
+            Python is powerful... and fast, plays well with others,runs everywhere, is friendly & easy to learn, is
+            Open.
+        </div>
+    </div>
+    <div>
+        <button class="accordion-button btn-outline-dark collapsed" data-toggle="collapse" data-target="#demo1"
+            aria-expanded="false" aria-controls="demo1"
+            style="border: 0; border-bottom:1px solid black; outline: 0; width:100%; height:3.5em; text-align:start ;">
+            Java programming language
+            <i class="fas fa-arrow-down" style="display:flex ; justify-content:end ; margin-top: -.7em;"></i>
+        </button>
+        <div id="demo1" class="collapse" style="margin: 1em;">
+            Java is a powerful general-purpose programming language. It is used to develop desktop and mobile
+            applications, big data
+            processing, embedded systems, and so on. According to Oracle, the company that owns Java, Java runs on 3
+            billion devices
+            worldwide, which makes Java one of the most popular programming languages.
+        </div>
+    </div>
+    <div>
+        <button class="accordion-button btn-outline-dark collapsed" data-toggle="collapse" data-target="#demo2"
+            aria-expanded="false" aria-controls="demo2"
+            style="border: 0;  outline: 0; width:100%; height:3.5em; text-align:start ;">
+            JavaScript programming language
+            <i class="fas fa-arrow-down" style="display:flex ; justify-content:end ; margin-top: -.7em;"></i>
+        </button>
+        <div id="demo2" class="collapse" style="margin: 1em;">
+            JavaScript is a scripting or programming language that allows you to implement complex features on web
+            pages.
+        </div>
+    </div>
+
+
+    <div style="width: 100%; height: 1em; background-color: gray; margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <div style="width: 100%; height: 1em; background-color: gray"></div>
+
+
+    <h1 class="text-center text-light bg-secondary p-3 m-0 ">Python is very easy </h1>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="text-light">try the code below from <a href="https://www.python.org/shell/"
+                    target="_blank">here</a>
+            </h4>
+            <div class="btn btn-sm btn-outline-light" onclick="copyPaste('mypython')" id="copyfun">
+                copy
+            </div>
+            <pre>
+            <code class="text-info" id="mypython">
+                name = input('enter your name: '); print("Hello" + name)
+            </code>
+        </pre>
+        </div>
+    </div>
+
+
+    <div style="width: 100%; height: 1em; background-color: gray; margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <div style="width: 100%; height: 1em; background-color: gray"></div>
+
+
+    <h1 class="text-center text-light bg-secondary p-3 m-0 ">java is very easy </h1>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="text-light">try the code below from <a href="https://www.python.org/shell/"
+                    target="_blank">here</a>
+            </h4>
+            <div class="btn btn-sm btn-outline-light" onclick="copyPaste('mypython')" id="copyfun">
+                copy
+            </div>
+            <pre>
+                <code class="text-info" id="mypython">
+                    System.out.println("Hello World!");
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+    <div style="width: 100%; height: 1em; background-color: gray; margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <div style="width: 100%; height: 1em; background-color: gray"></div>
+
+
+    <h1 class="text-center text-light bg-secondary p-3 m-0 ">javascript is very easy </h1>
+    <div class="card bg-dark">
+        <div class="card-body">
+            <h4 class="text-light">try the code below from <a href="https://www.python.org/shell/"
+                    target="_blank">here</a>
+            </h4>
+            <div class="btn btn-sm btn-outline-light" onclick="copyPaste('mypython')" id="copyfun">
+                copy
+            </div>
+            <pre>
+                <code class="text-info" id="mypython">
+                    console.log("Welcome to Programiz!");
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+    <div style="width: 100%; height: 1em; background-color: gray; margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <div style="width: 100%; height: 1em; background-color: gray"></div>
+
+
+
+    <div
+        style="width: 100%; height: 20em; background-image: url('images/pictures/خلفيات-كمبيوتر-موقع-محيط-_182048401_-__.jpg'); background-attachment:fixed;">
+    </div>
+    <h1 class="text-center text-light bg-secondary p-3 m-0 ">Good basic </h1>
+
+
+    <div class="container-fluid">
+        <div class="row justify-content-around pb-5 " style="background-color: #555; border-radius: 7px;">
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/HTML.png" class="card-img-top" alt="html pic"></a>
+                <div class="card-body">
+                    <h5 class="card-title">HTML</h5>
+                    <p class="card-text">html from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- html card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/css.png" class="card-img-top" alt="css pic"></a>
+                <div class="card-body">
+                    <h5 class="card-title">CSS</h5>
+                    <p class="card-text">Css from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /css card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/JS.png" class="card-img-top" alt="css pic" height="310rem"></a>
+                <div class="card-body">
+                    <h5 class="card-title">JavaScript</h5>
+                    <p class="card-text">JavaScript from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /JS card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/java.webp" class="card-img-top" alt="css pic" height="265PX"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Java</h5>
+                    <p class="card-text">Java from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /Java card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/Python-Symbol.png" class="card-img-top" alt="css pic" height="265PX"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Python from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /python card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/bootstrap.png" class="card-img-top" alt="css pic" height="265PX"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Bootstrap</h5>
+                    <p class="card-text">Bootstrap from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /Bootstrap card -->
+            <div class="card bg-dark text-light col-lg-3 col-md-4 col-sm-6 m-1 mt-5" style="width: 18rem;">
+                <a href="" target="_blank">
+                    <img src="images/pictures/json-logo.png" class="card-img-top" alt="css pic" height="265PX"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Json</h5>
+                    <p class="card-text">Json from zero to hero.</p>
+                    <a href="" class="btn btn-primary">download the book</a>
+                </div>
+            </div>
+            <!-- /Json card -->
+        </div>
+    </div>
+
+
+    <div
+        style="width: 100%; height: 20em; background-image: url('images/pictures/images.jpg'); background-attachment:fixed; background-repeat: no-repeat; background-size: cover;">
+    </div>
+
+    <div class="bg-secondary" style="width: 100%; height: 1em;  margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+
+
+    <h2 class="text-center text-light p-4 bg-secondary m-0">Thanks For</h2>
+    <div class="container-fluid bg-secondary">
+        <div class="row justify-content-center">
+            <div class="card m-3 bg-dark text-light" style="width: 18rem;">
+                <img src="images/pictures/zwail.jpg" class="card-img-top p-2" height="300px" alt="zwail">
+                <div class="card-body">
+                    <p class="card-text">Dr : Ahmed Zwail</p>
+                </div>
+            </div>
+            <div class="card m-3 bg-dark text-light" style="width: 18rem;">
+                <img src="images/pictures/trainer1.jpg" class="card-img-top p-2" height="300px" alt="zwail">
+                <div class="card-body">
+                    <p class="card-text">Eng : Mohamed Tarek</p>
+                </div>
+            </div>
+            <div class="card m-3 bg-dark text-light" style="width: 18rem;">
+                <img src="images/pictures/pyramids-of-giza.jpg" class="card-img-top p-2" height="300px" alt="zwail">
+                <div class="card-body">
+                    <p class="card-text">Egypt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-secondary" style="width: 100%; height: 1em;  margin: 0; border-bottom:1px solid rgb(73, 73, 73) ;">
+    </div>
+    <h2 class="text-center text-light p-4 bg-secondary m-0">Join Us</h2>
+
+    <div class="container-fluid bg-secondary">
+        <div class="row justify-content-center">
+            <div class="card m-3 bg-dark" style="width: 18rem;">
+                <div class="card-body text-light d-flex flex-column text-center">
+                    <h6 class="card-title mb-4">Subscribe Now
+                    </h6>
+                    <input class="myicon mb-2" style="align-self: center; width: 2em; height: 2em;"
+                        src="images/pictures/facebook-512.webp" type="image" alt="facebook">
+                    <a href="" target="_blank" class="card-link">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-dark" style="width: 18rem;">
+                <div class="card-body text-light d-flex flex-column text-center">
+                    <h6 class="card-title mb-4">Follow
+                    </h6>
+                    <input class="myicon mb-2" style="align-self: center; width: 2em; height: 2em;"
+                        src="images/pictures/facebook-512.webp" type="image" alt="facebook">
+                    <a href="" target="_blank" class="card-link">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-dark" style="width: 18rem;">
+                <div class="card-body text-light d-flex flex-column text-center">
+                    <h6 class="card-title mb-4">Like the page
+                    </h6>
+                    <input class="myicon mb-2" style="align-self: center; width: 2em; height: 2em;"
+                        src="images/pictures/facebook-512.webp" type="image" alt="facebook">
+                    <a href="" target="_blank" class="card-link">Go to link</a>
+                </div>
+            </div>
+            <div class="card m-3 bg-dark" style="width: 18rem;">
+                <div class="card-body text-light d-flex flex-column text-center">
+                    <h6 class="card-title mb-4">watch vedios
+                    </h6>
+                    <input class="myicon mb-2" style="align-self: center; width: 2em; height: 2em;"
+                        src="images/pictures/facebook-512.webp" type="image" alt="facebook">
+                    <a href="" target="_blank" class="card-link ">Go to link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center text-light  bg-secondary m-0 " style="height: 4em;"></div>
+
+
+    <div class="bg-dark text-light  p-2  ">
+
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="border-top ">
+                    <h5><img src="images/pictures/facebook-512.webp" style="width:1.5em ; height: 1.5em;" alt="good pic"
+                            class="myicon"> Good Company</h5>
+                    <hr class="border-top">
+                    <address>
+                        <p>Tel : 000-000-000</p>
+                        <p>Address : EGYPT</p>
+                        <p>Fax : 000-000-000</p>
+                    </address>
+                </div>
+                <div class="col-md-4">
+                    <hr class="border-top my-3">
+                    <h5><img src="images/pictures/facebook-512.webp" style="width:1.5em ; height: 1.5em;" alt="good pic"
+                            class="myicon"> Important links</h5>
+                    <hr class="border-top my-3">
+                    <p><a href="" target="_blank">Visit Us</a></p>
+                    <p><a href="" target="_blank">Take alook</a></p>
+                    <p><a href="" target="_blank">Your health is more important</a></p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="border-top my-3">
+                    <h5><img src="images/pictures/facebook-512.webp" style="width:1.5em ; height: 1.5em;" alt="good pic"
+                            class="myicon"> Vision</h5>
+                    <hr class="border-top my-3">
+                    <p>Serveices for all </p>
+                    <p>Provide best serveices</p>
+                    <p>you will be better than before</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <span class="text-center d-block text-light">Copyright © 2022 Mohamed Tarek Osman, Good Company.
+            Allrights</span>
+        <hr>
+    </div>
+    <script src="bootstrab/js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrab/js/bootstrap.js"></script>
+    <script src="first.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        #slide {
+            height: 300px;
+            width: 400px;
+            border: 5px solid yellow;
+        }
+
+        button {
+            padding: 5px 20px;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        div.controls {
+            margin-top: 10px;
+            display: flex;
+            width: 400px;
+            justify-content: space-between;
+        }
+
+        .c1 {
+            background-image: url('../images/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .c2 {
+            background-image: url('../images/2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .c3 {
+            background-image: url('../images/3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .c4 {
+            background-image: url('../images/4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="c1" id="slide"></div>
+            <div class="controls">
+                <div><button onclick="left()" style="background-color: orange;">&#9664;</button></div>
+                <div><button onclick="play()" style="background-color: green;">Play</button></div>
+                <div><button onclick="pause()" style="background-color: red;">Pause</button></div>
+                <div><button onclick="right()" style="background-color: orange;">&#9654;</button></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var i = 1;
+        var slide = document.getElementById('slide');
+        var timer;
+        function left() {
+            i--;
+            if (i <= 0) { i = 4; }
+            slide.className = 'c' + i;
+            console.log(i);
+        }
+        function right() {
+            i++;
+            if (i > 4) { i = 1; }
+            slide.className = 'c' + i;
+            console.log(i);
+        }
+        function play() {
+            pause();
+            timer = setInterval(right, 700);
+        }
+        function pause() {
+            clearInterval(timer);
+        }
+    </script>
+</body>
+
+</html>

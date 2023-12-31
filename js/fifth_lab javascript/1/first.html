@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="btn">get users</button>
+    <br>
+    <br>
+    <table id="userTable">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>user name</th>
+            <th>email</th>
+            <th>address</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>company</th>
+        </tr>
+    </table>
+    <script>
+        var table = document.getElementById('userTable');
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4) {
+                    if (xhttp.status == 200) {
+                        var data = JSON.parse(xhttp.response);
+                        for (var userData of data) {
+                            var neRow = document.createElement('tr');
+                            for (var data in userData) {
+                                var newData = document.createElement('td');
+                                if (typeof userData[data] == 'object') {
+                                    var obj = userData[data]
+                                    for (var d in obj) {
+                                        if (typeof obj[d] == 'object') {
+                                        } else {
+                                            newData.innerHTML += obj[d] + " ";
+                                        }
+                                    }
+                                } else {
+                                    newData.innerHTML = userData[data];
+                                }
+                                neRow.appendChild(newData);
+                            }
+                            table.appendChild(neRow);
+                        }
+                    }
+                }
+            }
+            xhttp.open('get', 'https://jsonplaceholder.typicode.com/users');
+            xhttp.send('');
+        }
+    </script>
+</body>
+
+</html>

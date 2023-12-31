@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 400px;
+            margin: 20px;
+        }
+
+        .con {
+            width: 800px;
+            margin: auto;
+        }
+
+        .con div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            float: left;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: #ddd;
+        }
+
+        div.r {
+            background-color: red;
+        }
+
+        div.y {
+            background-color: yellow;
+        }
+
+        div.g {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="con">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+
+
+        var container = document.getElementsByClassName('con')[0];
+
+
+
+        setInterval(() => {
+
+            startgame();
+
+        }, 3000);
+
+
+        function startgame() {
+
+            setTimeout(() => {
+                container.children[0].classList.add('r');
+                container.children[2].classList.remove('g');
+            }, 1000);
+
+            setTimeout(() => {
+                container.children[0].classList.remove('r');
+                container.children[1].classList.toggle('y');
+            }, 2000);
+
+            setTimeout(() => {
+                container.children[1].classList.remove('y');
+                container.children[2].classList.add('g');
+            }, 3000);
+
+        }
+    </script>
+</body>
+
+</html>

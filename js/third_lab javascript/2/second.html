@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.container {
+            margin: 100px;
+        }
+
+        div.container div.imgContainer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgContainer">
+            <img src="../1.jfif" onmouseenter="stop(this)" onmouseleave="start()">
+            <img src="../1.jfif" onmouseenter="stop(this)" onmouseleave="start()">
+            <img src="../1.jfif" onmouseenter="stop(this)" onmouseleave="start()">
+            <img src="../1.jfif" onmouseenter="stop(this)" onmouseleave="start()">
+            <img src="../1.jfif" onmouseenter="stop(this)" onmouseleave="start()">
+        </div>
+    </div>
+    <script>
+        start();
+        var mydiv = document.getElementsByClassName('imgContainer')[0];
+        var i = 0;
+        var timer;
+
+
+        function start() {
+            if (i > 4) { i = 0; }
+            timer = setTimeout(() => {
+                if (i == 0) {
+                    mydiv.children[0].src = "../2.jfif";
+                    mydiv.children[4].src = "../1.jfif";
+                } else {
+                    mydiv.children[i].src = "../2.jfif";
+                    mydiv.children[i - 1].src = "../1.jfif";
+                }
+                i++;
+                start();
+            }, 500);
+        }
+
+
+        function stop() {
+            clearTimeout(timer);
+            if (i == 0) {
+                mydiv.children[4].src = "../3.jfif";
+            } else {
+                mydiv.children[i - 1].src = "../3.jfif";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

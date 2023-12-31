@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <script>
+        var win;
+        var timer;
+        function start() {
+            var x = 0, y = 640;
+            win = window.open("", "", "width=150px,height=150px");
+            timer = setInterval(() => {
+                if (x <= 640) {
+                    win.moveTo(x, x);
+                    x += 10;
+                } else if (y >= 0) {
+                    win.moveTo(y, y);
+                    y -= 10;
+                } else {
+                    x = 0;
+                    y = 640;
+                }
+            }, 200);
+        }
+
+
+        function stop() {
+            clearInterval(timer);
+            win.focus();
+        }
+    </script>
+</body>
+
+</html>

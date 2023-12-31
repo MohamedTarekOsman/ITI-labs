@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.containe{
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100vh;
+    background-color: #000000;
+}
+.image_sm{
+    width: 100px;
+    height: 100px;
+    border: 2px solid brown;
+    border-radius: 50%;
+    margin: 10px 0 0 80px;
+}
+.p_sm{
+    font-size: 12px;
+    font-weight:bolder ;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 10px 0 0 85px;
+}
+.fab{
+    color: #ffffff;
+    width: 15px;
+    height: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.fab1{
+    margin-left: 45px;
+}
+.fab:hover{
+    color: #133681;
+}
+/*.........................*/
+.img_big{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+}
+.right{
+    position: relative;
+}
+.para{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-top: -100vh;
+}
+.first{
+    margin-top: 27%;
+    margin-left: 30%;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.second{
+        margin-top:-1.5% ;
+            margin-left: 30%;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bolder;
+}
+.foot p {
+    margin-top: 85%;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    color: white;
+    font-weight: bold;
+}
+.hr1{
+    width: 80px;
+    height: 1px;
+    background-color:blue;
+    margin-top: 10px;
+    margin-left: 30%;
+}
+.list_1 div:hover{
+    background-color: #133681;
+}

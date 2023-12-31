@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            margin: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        div button {
+            margin: 10px;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            width: 180px;
+        }
+        #success {
+            background-color: green;
+        }
+        #error {
+            background-color: darkred;
+        }
+        div.messageContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        div.message {
+            width: 70%;
+            text-align: center;
+            position: relative;
+        }
+
+        div.message div {
+            background-color: #ddd;
+            padding: 15px;
+            box-shadow: 3px 3px 3px #ccc, 0px 0px 5px #ccc;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        div.message .success {
+            color: green;
+
+        }
+
+        div.message .error {
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><button id="success" onclick="success()">Success Alert</button></div>
+        <div><button id="error" onclick="error()">Error Alert</button></div>
+    </div>
+    <div class="messageContainer">
+        <div class="message">
+            <div class="success">
+                <h2>Success</h2>
+                <span style="font-size: 50px;">&#128516</span>
+                <p>This is a Success Message</p>
+            </div>
+            <div class="error">
+                <h2>Erorr</h2>
+                <span style="font-size: 50px;">&#128532</span>
+                <p>This is an Error Message</p>
+            </div>
+        </div>
+    </div>
+    <script>
+            var successMess = document.querySelector('.success');
+            var errorMess = document.querySelector('.error');
+            function success()
+            {
+                successMess.style.opacity  ='1';
+                errorMess.style.opacity  ='0';
+            }
+            function error()
+            {
+                successMess.style.opacity  ='0';
+                errorMess.style.opacity  ='1';
+            }
+    </script>
+</body>
+
+</html>

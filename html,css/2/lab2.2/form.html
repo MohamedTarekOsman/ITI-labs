@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+ <header><h1 style="text-align:center ;">Reservstion Form</h1></header>
+
+ <main>
+    <form style="text-align: center;">
+        <section>
+            <label for="name">Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="name" id="name" required placeholder="Name">
+        </section>
+        <br>
+        <br>
+        <section >
+            <label for="email">Email*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="email" name="email" id="email" required placeholder="Email">
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="selection">Room Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select name="selection" id="selection" style="width: 15%;">
+                <option value="">select</option>
+                <option value="room1">room1</option>
+                <option value="room2">room2</option>
+                <option value="room3">room3</option>
+                <option value="room4">room4</option>
+            </select>
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="Arrival">Arrival Date*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="date" name="Arrival" id="Arrival" required style="width: 15%;">
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="Departure">Departure Date*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="date" name="Departure" id="Departure" required style="width: 15%;">
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="number">Number of Guests*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" name="number" id="number" required style="width: 15%;" min="1">
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="free">Free Pickup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" name="free" id="free" >
+            <label >Yes</label>
+            <input type="radio" name="free" id="free"   >
+            <label>No</label>
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="flight">Flight Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="flight" id="flight"  style="width: 15%;" placeholder="Flight Number">
+        </section>
+        <br>
+        <br>
+        <section>
+            <label for="Special">Special Requests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <textarea  name="Special" id="Special"cols="30" rows="3" placeholder="Type here"></textarea>
+        </section>
+        <br>
+        <button type="submit" style="background-color: blueviolet; color: white; border: 0; width: 90px; height:30px ;">Submit</button>
+    </form>
+ </main>
+        
+</body>
+</html>

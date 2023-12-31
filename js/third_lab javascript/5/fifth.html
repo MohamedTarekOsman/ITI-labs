@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <button onclick="display()">show message</button>
+    <script>
+        var message = "ksgsdvsvsvksdvsvsvegmkrdvsv eksvsdvsdsdsgmk kemgke kmefellfmel\n,kedlvsdv fkmekmrmsdv mkfk sdvlfhkfhllhlf dvsdvdsdsokgrokg";
+        var arr = message.split("");
+
+        function display() {
+            var i = 0;
+            var win = window.open("", "", "width=400,height=100")
+            var time = setInterval(() => {
+                if (i < message.length) {
+                    win.document.write(message[i++]);
+                } else {
+                    clearInterval(time);
+                }
+            }, 150);
+        }
+    </script>
+</body>
+
+</html>

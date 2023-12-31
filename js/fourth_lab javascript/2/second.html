@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.container {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ddd;
+            background-color: rgba(221, 221, 221, 0.7);
+            padding: 8px;
+            position: fixed;
+            color: navy;
+        }
+
+        div.inputcontainer {
+            margin: 20px;
+        }
+
+        input[type='text'],
+        input[type='password'],
+        input[type='email'] {
+            display: block;
+            margin-top: 5px;
+            width: 300px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        input[type='text']:focus,
+        input[type='password']:focus,
+        input[type='email']:focus {
+            border: 2px solid green;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+
+        .btn {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn input {
+            width: 25%;
+            padding: 8px 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px #ccc;
+            color: white;
+            background-color: red;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn input[type='button'] {
+            background-color: green;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="inputcontainer">
+                <label for="fullname">Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="">
+            </div>
+            <div class="inputcontainer">
+                <label for="email">Email </label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="inputcontainer">
+                <label for="pass">Password </label>
+                <input type="password" id="pass" name="pass">
+            </div>
+            <div class="btn">
+                <input type="button" onclick="go()" value="submit">
+                <input type="reset" value="reset">
+            </div>
+
+        </form>
+    </div>
+    <script>
+        var inputName = document.getElementById('fullname');
+        var inputEmail = document.getElementById('email');
+        var inputpass = document.getElementById('pass');
+        var submitBtn = document.querySelector('input[type="button"]');
+        var p = document.getElementById('invalidP');
+        document.getElementById('close').onclick = function () {
+            document.querySelector('.errorAlertContainer').classList.remove('disblock');
+        }
+        function nameVal() {
+            var val = inputName.value;
+            return /^[a-zA-Z ]+$/.test(val);
+        }
+        function emailVal() {
+            var val = inputEmail.value;
+            return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(val);
+        }
+        function passVal() {
+            var val = inputpass.value;
+            console.log(val)
+            return /^\w{8,}$/.test(val);
+        }
+        function go() {
+
+            if (!nameVal()) {
+                inputName.focus();
+                inputName.value = '';
+                inputName.style.border = '1px solid red';
+                inputName.placeholder = 'invalid Name';
+                return false;
+            } else {
+                inputName.style.border = '1px solid #ccc';
+            }
+            if (!emailVal()) {
+                inputEmail.focus();
+                inputEmail.value = '';
+                inputEmail.style.border = '1px solid red';
+                inputEmail.placeholder = 'invalid mail';
+                return false;
+            } else {
+                inputEmail.style.border = '1px solid #ccc';
+            }
+            if (!passVal()) {
+                inputpass.focus();
+                inputpass.value = '';
+                inputpass.style.border = '1px solid red';
+                inputpass.placeholder = 'invalid password';
+                return false;
+            } else {
+                inputpass.style.border = '1px solid #ccc';
+            }
+            location.href = 'success.html';
+        }
+    </script>
+</body>
+
+</html>

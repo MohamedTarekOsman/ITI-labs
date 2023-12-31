@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <label for="name">Enter your name </label>
+        <input id="username" name="username" type="text">
+        <br>
+        <br>
+        <label for="age">Enter your age </label>
+        <input id="age" name="age" type="text">
+        <br><br>
+        <input type="radio" id="male" name="gender" value="male"><img src="./male.jpg">
+        <input type="radio" id="female" name="gender" value="female"><img src="./female.jpg">
+        <br><br>
+        <label for="name">Select Your favorite color </label>
+        <select id="color">
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+        <br><br>
+        <button id="btn" type="button">register</button>
+    </form>
+    <script src="second.js"></script>
+    <script>
+        var date = new Date();
+        date.setDate(date.getDate() + 3);
+
+        var date2 = new Date();
+        date2.setDate(date.getDate() - 5);
+
+
+        function setcookie(key, value) {
+            document.cookie = `${key}=${value};expires=${date}`;
+        }
+
+        function getcookie(key) {
+
+            var cookies = document.cookie;
+            console.log(cookies);
+            var arrofcookies = cookies.split(';');
+
+            for (elem of arrofcookies) {
+                var arr = elem.split('=');
+
+                if (arr[0].trim() == key) {
+                    return arr[1];
+                }
+
+            }
+            return undefined;
+        }
+
+        function deletecookie(key) {
+            document.cookie = `${key}=null;expires=${date2}`;
+        }
+        var uname = document.getElementById('username');
+        var age = document.getElementById('age');
+        var gender = document.querySelectorAll('input[type="radio"]');
+        var color = document.getElementById('color');
+
+        var btn = document.getElementById('btn');
+
+
+
+        btn.addEventListener('click', () => {
+
+
+            setcookie('name', uname.value);
+
+            setcookie('age', age.value);
+
+            setcookie('gender', getGender());
+
+            setcookie('color', color.value);
+
+            setcookie('counter', '1');
+
+            location.href = 'success.html';
+        });
+
+
+        function getGender() {
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    return gender[i].value;
+                }
+            }
+        }
+        window.onload = function () {
+            var cookie = getcookie('name');
+            console.log(cookie);
+            if (cookie !== undefined) {
+                location.href = 'success.html';
+            }
+        }
+    </script>
+</body>
+
+</html>
